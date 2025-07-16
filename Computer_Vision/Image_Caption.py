@@ -3,17 +3,13 @@ from PIL import Image
 from transformers import VisionEncoderDecoderModel, ViTImageProcessor, GPT2TokenizerFast
 from tqdm import tqdm
 
-
-
-# ViT Encoder - Decoder Model
 model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 tokenizer = GPT2TokenizerFast.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 
-# Image processor
+
 image_processor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 
 
-# Image inference
 def get_caption(model, image_processor, tokenizer, image_path):
   """
     Generate a caption for a given image using a ViT-GPT2 image captioning model.
@@ -34,25 +30,18 @@ def get_caption(model, image_processor, tokenizer, image_path):
         str: Generated caption describing the image.
     """
     # Open the image
-    image = Image.open(image_path)
-    if image.mode != "RGB":
-      image = image.convert(mode="RGB")
-
-    # Process image for model
-    img = image_processor(image, return_tensors="pt")
-
-    # Generate caption (token IDs)
-    output = model.generate(**img)
-
-    # Decode tokens to text
-    caption = tokenizer.batch_decode(output, skip_special_tokens=True)[0]
-
-    return caption
+  image = Image.open(image_path)
+  if image.mode != "RGB":
+    image = image.convert(mode="RGB")
 
 
-# if __name__ == "__main__":
-#     # Example usage
-#     image_path="C:\\Users\\Noga\\Downloads\\Mobsir\\Computer_Vision\\test8.jpg" # Replace with your image path
-#     caption = get_caption(model, image_processor, tokenizer, image_path)
-#     print(f"Caption: {caption}")
+  img = image_processor(image, return_tensors="pt")
+
+
+  output = model.generate(**img)
+
+  caption = tokenizer.batch_decode(output, skip_special_tokens=True)[0]
+
+  return caption
+
     

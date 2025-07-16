@@ -1,5 +1,3 @@
-# translation_module.py
-
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import torch
 
@@ -17,13 +15,3 @@ def translate_objects(object_names):
     """   Translate a list of object names from English to Arabic."""
     return [translate_text(name) for name in object_names]
 
-
-
-
-
-if __name__ == "__main__":
-    detected_objects = ["this is a person", "This is a bicycle", "this is a cat"]
-    translated = translate_objects(detected_objects)
-
-    for eng, ar in zip(detected_objects, translated):
-        print(f"{eng} → {ar}")
