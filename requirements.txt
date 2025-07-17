@@ -1,12 +1,12 @@
 deepface==0.0.93
 edge_tts==7.0.2
-numpy==2.3.1
+numpy==1.26.4
 Pillow==11.3.0
 pygame==2.6.1
-scipy==1.16.0
+scipy==1.13.1
 sounddevice==0.5.2
 streamlit==1.45.1
-torch==2.7.1
+torch==2.2.2
 tqdm==4.67.1
 transformers==4.53.2
 SpeechRecognition==3.14.3
@@ -15,3 +15,4 @@ sentencepiece==0.2.0
 tokenizers==0.21.2
 huggingface-hub==0.33.4
 requests==2.32.4
+
