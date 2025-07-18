@@ -23,19 +23,20 @@
 
 mobsir/
 ├── NLP/
-│ ├── Voice_Assistant.py # 🎤 Audio input and Arabic TTS (Edge TTS / pyttsx3)
-│ └── Translation.py #  English → Arabic translation
+│   ├── Voice_Assistant.py         # 🎤 Audio input and Arabic Text-to-Speech (Edge TTS / pyttsx3)
+│   └── Translation.py             # 🔤 English → Arabic translation
 │
 ├── Computer_Vision/
-│ ├── Image_Caption.py #  Transformer-based image captioning
-│ └── face_recognition.py #  Face recognition & family member identification
+│   ├── Image_Caption.py           # 🖼️ Transformer-based image captioning
+│   └── face_recognition.py        # 👤 Face recognition & family member identification
 │
 ├── assets/
-│ └── favicon.jpg #  Streamlit page icon
+│   └── favicon.jpg                # 🌐 Streamlit page icon
 │
-├── main.py #  Streamlit UI + async voice assistant control
-├── requirements.txt #  Python dependencies
-└── README.md #  Project documentation
+├── main.py                        # 🖥️ Streamlit UI + asynchronous voice assistant control
+├── requirements.txt               # 📦 Project dependencies
+└── README.md                      # 📄 Project documentation
+
 
 
 ## Install dependencies:
