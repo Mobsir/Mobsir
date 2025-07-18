@@ -1,4 +1,4 @@
-# (عندما يُصبح الصوت بصيرة)
+#                                                                         مُبصر  (عندما يُصبح الصوت بصيرة)
 
 
  # Mobsir 👀🔉: Voice-Controlled Assistive System for the Blind
@@ -23,15 +23,23 @@
 
 mobsir/
 ├── NLP/
+
 │ ├── Voice_Assistant.py # Audio input and TTS logic
+
 │ └── Translation.py # English → Arabic translation
+
 ├── Computer_Vision/
 │ ├── Image_Caption.py # Transformer image captioning
+
 │ └── face_recognition.py # Face recognition and matching with family DB
+
 ├── assets/
 │ └── favicon.jpg # App icon
+
 ├── main.py # Streamlit UI + Assistant control loop
+
 ├── requirements.txt
+
 └── README.md
 
 
