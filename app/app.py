@@ -1,20 +1,18 @@
-import streamlit as st
-from PIL import Image
-import asyncio
-import os
 import re
-import threading
-import sys
-
+import os
+import asyncio
+from PIL import Image
+import streamlit as st
 # Modify sys.path to include the root folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 # Import your modules with error handling
 try:
     from NLP.Voice_Assistant import *
     from NLP.Translation import *
     from Computer_Vision.Image_Caption import *
-    from Computer_Vision.face_recognition import check_family_in_image
+    from Computer_Vision.face_recognition import *
 except ImportError as e:
     st.error(f"Import error: {e}")
     st.stop()
@@ -110,7 +108,7 @@ def run_async_function(coro):
 async def enhance_caption_with_family(original_caption, img_path):
     """Enhance the caption with family member names if they are detected."""
     try:
-        family_members = await check_family_in_image(img_path)
+        family_members = await check_family_in_image("family",img_path)
         
         if family_members:
             valid_names = [name for name in family_members if name and name.strip()]
@@ -136,7 +134,7 @@ def run_voice_assistant():
             while True:
                 command = listen_once(duration=3)
                 if any(word in command for word in START_COMMANDS):
-                    await edge_speak("تمام! يمكنك قول استكشف المكان، التقط صورة، أو شكرًا مبصر.")
+                    await edge_speak("أهلا بك صديق مبصر! يمكنك قول استكشف المكان، التقط صورة، أو شكرًا مبصر.")
                     break
                 elif command:
                     await edge_speak("لم أسمع أهلا مبصر، حاول مرة أخرى.")
@@ -150,7 +148,7 @@ def run_voice_assistant():
                     if img_path:
                         await edge_speak("تم التقاط الصورة وحفظها.")
                         try:
-                            family = await check_family_in_image(img_path)
+                            family = check_family_in_image("family",img_path)
                             if family:
                                 names = "، ".join(family)
                                 await edge_speak(f"الأشخاص الموجودين في الصورة: {names}")
