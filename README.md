@@ -1,8 +1,8 @@
 # 👁️‍🗨️ مُبصر  (عندما يُصبح الصوت بصيرة)
 
-# **Mobsir 👀🔉: Voice-Controlled Assistive System for the Blind**
+# **Mobsir 👀🔉**
 
-![Mobsir Logo](assets/logo.png)
+![Mobsir Logo](assets/logo.jpg)
 
 **Mobsir** is an intelligent, voice-driven assistive system designed to empower blind or visually impaired individuals by making the world around them more accessible. Leveraging advanced computer vision, natural language processing, and Arabic voice technologies, **Mobsir** provides a seamless and interactive experience for navigating and understanding surroundings.
 
@@ -19,7 +19,7 @@ Through voice commands and smart vision, Mobsir translates visual cues into rich
 
 ---
 
-## 🚀 Features
+## ✍️ Features
 
 - 🎤 **Arabic Voice Assistant** to receive and respond to voice commands
 - 🖼️ **Image Captioning** using transformer models to describe surroundings
@@ -32,20 +32,18 @@ Through voice commands and smart vision, Mobsir translates visual cues into rich
 
 ---
 
-## 🧪 Demo
+## 💡 Demo
 
-![Demo Screenshot](assets/UI.png)
-
-*(Optionally, add a GIF or YouTube link here)*
+![Demo Screenshot](assets/UI_design.png)
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python 3.8+**
+- **Python 3.10**
 - **Streamlit** for UI
 - **Transformers** for image captioning
-- **face_recognition** for facial analysis
+- **DeepFace** for facial analysis
 - **SpeechRecognition, pyttsx3, Edge TTS** for voice interactions
 - **DeepL or custom translation module** for bilingual communication
 
@@ -70,8 +68,8 @@ mobsir/
 │   └── main.py                    # 🖥️ Main Streamlit interface
 │
 ├── assets/
-│   ├── logo.png                   # 🖼️ Project logo
-│   └── design_screen.png          # 📱 UI preview
+│   ├── logo.jpg                   # 🖼️ Project logo
+│   └── UI_design.png              # 📱 UI preview
 │
 ├── requirements.txt               # 📦 Dependencies list
 └── README.md                      # 📄 Documentation file
@@ -100,9 +98,11 @@ streamlit run app/main.py
 ---
 
 ## 👥 Contributors
-
-- Mennatullah Tarek – AI/ML Engineer & Voice Assistant Developer
-- [Add other names here]
+- Yasmin Kadry
+- Mennatullah Tarek
+- Aya Attia
+- Rehab Abdelghaffar
+- Nagwa Mohammed
 
 ---
 
