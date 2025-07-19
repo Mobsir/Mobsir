@@ -3,11 +3,14 @@ from PIL import Image
 from transformers import VisionEncoderDecoderModel, ViTImageProcessor, GPT2TokenizerFast
 from tqdm import tqdm
 
-model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
-tokenizer = GPT2TokenizerFast.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
+model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning",
+    cache_dir="./models_cache")
+tokenizer = GPT2TokenizerFast.from_pretrained("nlpconnect/vit-gpt2-image-captioning",
+    cache_dir="./models_cache")
 
 
-image_processor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
+image_processor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning",
+    cache_dir="./models_cache")
 
 
 def get_caption(model, image_processor, tokenizer, image_path):
