@@ -34,7 +34,7 @@ Through voice commands and smart vision, Mobsir translates visual cues into rich
 
 ## 🧪 Demo
 
-![Demo Screenshot](assets/design_screen.png)
+![Demo Screenshot](assets/UI.png)
 
 *(Optionally, add a GIF or YouTube link here)*
 
