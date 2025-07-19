@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+env/
+pip-log.txt
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Images or cache
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.tiff
+*.tfrecord
+*.log
+*.mp4
+*.avi
+
+# Model files
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.onnx
+*.tflite
+
+# IDEs
+.idea/
+*.swp
+
+# Coverage / testing
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# Distribution / packaging
+build/
+dist/
+*.wheel
+*.egg
+*.manifest
+*.spec
+
+# Logs
+*.log
+logs/
+
+# Node (if web UI or React Native is used)
+node_modules/
+
+# PyInstaller
+*.spec
