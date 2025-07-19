@@ -6,6 +6,9 @@ import re
 import threading
 import sys
 
+# Modify sys.path to include the root folder
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 # Import your modules with error handling
 try:
     from NLP.Voice_Assistant import *
